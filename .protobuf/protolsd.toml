@@ -1,0 +1,16 @@
+input_dir = 'src'
+output_dir = 'dist'
+output_type = 'protobuf'
+order_persist = true
+with_grpc = true
+
+[protobuf]
+version = 'latest'
+auto_dl = true
+package = 'main'
+targets = ['go', 'csharp']
+
+
+[protobuf.options]
+go_package = 'renkei-server'
+csharp_namespace = 'Renkei.Grpc'
