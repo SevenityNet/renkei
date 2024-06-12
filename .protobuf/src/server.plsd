@@ -1,0 +1,11 @@
+/*
+The hello message is sent on first gRPC request from the client to the server to check if any communication is possible.
+The server will respond with a HelloResponse message which contains the API version of the server.
+*/
+message HelloResponse {
+  string version
+}
+
+service ServerService {
+  rpc Hello returns (HelloResponse)
+}

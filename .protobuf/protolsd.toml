@@ -1,6 +1,6 @@
 input_dir = 'src'
 output_dir = 'dist'
-output_type = 'protobuf'
+output_type = 'compiled'
 order_persist = true
 with_grpc = true
 
@@ -12,5 +12,8 @@ targets = ['go', 'csharp']
 
 
 [protobuf.options]
-go_package = 'renkei-server'
+go_package = 'renkei-server/grpc/proto'
 csharp_namespace = 'Renkei.Grpc'
+
+[protobuf.target.go]
+output_dir = '/../../../server/grpc/proto'
